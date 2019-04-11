@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3300ff</color>
-    <color name="colorPrimaryDark">#000033</color>
-    <color name="colorAccent">#660099</color>
-    <color name="Gold">#ffff00</color>
+    <color full_Name="colorPrimary">#3300ff</color>
+    <color full_Name="colorPrimaryDark">#000033</color>
+    <color full_Name="colorAccent">#660099</color>
+    <color full_Name="Gold">#ffff00</color>
 </resources>
