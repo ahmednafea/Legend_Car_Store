@@ -35,4 +35,10 @@ public class Administration {
         return Client;
     }
 
+    public static boolean Verify_User(String Email,String Password){
+        if(Email.equals(Client.getEmail())&&Password.equals(Client.getPassword()))
+            return true;
+        return false;
+    }
+
 }

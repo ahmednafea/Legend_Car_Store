@@ -3,17 +3,17 @@ package com.an.thelegendcarsstore.Models;
 import java.util.ArrayList;
 
  class User {
-     String ID;
-     String Full_Name;
-     String Email;
-     String Password;
-     String Mobile_Number;
-     String CreditCard_Number;
-     int Points;
-     ArrayList<String>Reviews;
-     ArrayList<String>History;
-     ArrayList<String> Rented_Cars;
-     ArrayList<String>Cart;
+    private String ID;
+     private String Full_Name;
+     private String Email;
+     private String Password;
+     private String Mobile_Number;
+     private String CreditCard_Number;
+     private int Points;
+     private ArrayList<String>Reviews;
+     private ArrayList<String>History;
+     private ArrayList<String> Rented_Cars;
+     private ArrayList<String>Cart;
 
      public User(String ID, String full_Name, String email, String password, String mobile_Number, String creditCard_Number) {
          this.ID = ID;
