@@ -1,4 +1,4 @@
-package com.an.thelegendcarsstore.customfonts;
+package com.an.thelegendcarsstore.Behavior;
 
 import android.content.Context;
 import android.support.design.widget.AppBarLayout;

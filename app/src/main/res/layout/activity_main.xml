@@ -35,14 +35,15 @@
                     android:layout_marginTop="6dp"
                     android:src="@drawable/search_icon" />
 
-                <customfonts.EditText_Roboto_Regular
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:background="#00000000"
                     android:hint="Search products"
                     android:inputType="text"
-                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
                     android:textColorHint="#cccccc" />
             </LinearLayout>
 
@@ -65,11 +66,11 @@
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
-                    <customfonts.MyTextView_sfuitext_regular
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="MOST LIKED"
-                        android:textColor="#000000"
+                        android:textColor="@color/colorAccent"
                         android:textSize="15sp" />
 
                     <ImageView
@@ -79,7 +80,7 @@
                         android:layout_marginTop="4dp"
                         android:src="@drawable/view_headline" />
 
-                    <customfonts.MyTextView_sfuitext_regular
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="20dp"
@@ -92,11 +93,12 @@
                 <!--recyclerview code is here-->
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/recycle"
+                    android:id="@+id/Home_MostLiked_recycle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clipToPadding="false"
-                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
                     android:layout_marginTop="10dp" />
 
                 <View
@@ -110,22 +112,22 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
-                    <customfonts.MyTextView_sfuitext_regular
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="CATEGORIES"
-                        android:textColor="#000000"
+                        android:textColor="@color/colorAccent"
                         android:textSize="15sp" />
 
 
-                    <customfonts.MyTextView_sfuitext_regular
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginEnd="20dp"
                         android:gravity="end"
                         android:text="View all"
                         android:textColor="#ef4e33"
@@ -138,170 +140,18 @@
                     android:scrollbars="none">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_marginTop="5dp">
-
-                        <LinearLayout
-                            android:layout_width="125dp"
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/Home_Categories_recycle"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:orientation="vertical">
-
-                            <FrameLayout
-                                android:layout_width="125dp"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/rect_whiteboder"
-                                android:padding="30dp">
-
-                                <ImageView
-                                    android:layout_width="50dp"
-                                    android:layout_height="40dp"
-                                    android:layout_gravity="center"
-                                    android:src="@drawable/ic_group1" />
-                            </FrameLayout>
-
-                            <customfonts.MyTextView_sfuitext_regular
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="5dp"
-                                android:layout_marginTop="5dp"
-                                android:text="Sport &amp; Gym"
-                                android:textColor="#000000"
-                                android:textSize="15sp" />
-
-                            <customfonts.MyTextView_sfuitext_regular
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginTop="3dp"
-                                android:text="170+ items"
-                                android:textColor="#8c8c8c"
-                                android:textSize="12sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="125dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="10dp"
-                            android:orientation="vertical">
-
-                            <FrameLayout
-                                android:layout_width="125dp"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/rect_whiteboder"
-                                android:padding="30dp">
-
-                                <ImageView
-                                    android:layout_width="50dp"
-                                    android:layout_height="40dp"
-                                    android:layout_gravity="center"
-                                    android:src="@drawable/ic_group2" />
-                            </FrameLayout>
-
-                            <customfonts.MyTextView_sfuitext_regular
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginTop="5dp"
-                                android:text="Construction"
-                                android:textColor="#000000"
-                                android:textSize="15sp" />
-
-                            <customfonts.MyTextView_sfuitext_regular
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="5dp"
-                                android:layout_marginTop="3dp"
-                                android:text="60+ items"
-                                android:textColor="#8c8c8c"
-                                android:textSize="12sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="125dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="10dp"
-                            android:orientation="vertical">
-
-                            <FrameLayout
-                                android:layout_width="125dp"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/rect_whiteboder"
-                                android:padding="30dp">
-
-                                <ImageView
-                                    android:layout_width="50dp"
-                                    android:layout_height="40dp"
-                                    android:layout_gravity="center"
-                                    android:src="@drawable/ic_group1" />
-                            </FrameLayout>
-
-                            <customfonts.MyTextView_sfuitext_regular
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="5dp"
-                                android:layout_marginTop="5dp"
-                                android:text="Sport &amp; Gym"
-                                android:textColor="#000000"
-                                android:textSize="15sp" />
-
-                            <customfonts.MyTextView_sfuitext_regular
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="5dp"
-                                android:layout_marginTop="3dp"
-                                android:text="170+ items"
-                                android:textColor="#8c8c8c"
-                                android:textSize="12sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="125dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="10dp"
-                            android:orientation="vertical">
-
-                            <FrameLayout
-                                android:layout_width="125dp"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/rect_whiteboder"
-                                android:padding="30dp">
-
-                                <ImageView
-                                    android:layout_width="50dp"
-                                    android:layout_height="40dp"
-                                    android:layout_gravity="center"
-                                    android:src="@drawable/ic_group2" />
-                            </FrameLayout>
-
-                            <customfonts.MyTextView_sfuitext_regular
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="5dp"
-                                android:layout_marginTop="5dp"
-                                android:text="Accessories"
-                                android:textColor="#000000"
-                                android:textSize="15sp" />
-
-                            <customfonts.MyTextView_sfuitext_regular
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="5dp"
-                                android:layout_marginTop="3dp"
-                                android:text="90+ items"
-                                android:textColor="#8c8c8c"
-                                android:textSize="12sp" />
-
-                        </LinearLayout>
+                            android:clipToPadding="false"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="15dp"
+                            android:layout_marginTop="10dp" />
                     </LinearLayout>
                 </HorizontalScrollView>
             </LinearLayout>
@@ -313,7 +163,7 @@
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:bb_behavior="shy"
+        app:bb_behavior="iconsOnly"
         android:layout_alignParentBottom="true"
         app:bb_tabXmlResource="@xml/bottombar" />
 </RelativeLayout>

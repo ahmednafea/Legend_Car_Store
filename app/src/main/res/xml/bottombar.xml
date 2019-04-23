@@ -8,20 +8,20 @@
         inActiveColor="#9b9b9b"
         activeColor="#ef4e33"/>
     <tab
-        id="@+id/tab_earth"
-        icon="@drawable/ic_earth"
+        id="@+id/Hot_Offers"
+        icon="@drawable/ic_hot_black"
         icononly="true"
         inActiveColor="#9b9b9b"
         activeColor="#ef4e33"/>
     <tab
-        id="@+id/tab_offer"
-        icon="@drawable/ic_black_shop_tag"
+        id="@+id/New_Products"
+        icon="@drawable/ic_stars_black"
         icononly="true"
         inActiveColor="#9b9b9b"
         activeColor="#ef4e33"/>
     <tab
-        id="@+id/tab_shape"
-        icon="@drawable/ic_shape"
+        id="@+id/Exit"
+        icon="@drawable/ic_exit_black"
         icononly="true"
         inActiveColor="#9b9b9b"
         activeColor="#ef4e33"/>

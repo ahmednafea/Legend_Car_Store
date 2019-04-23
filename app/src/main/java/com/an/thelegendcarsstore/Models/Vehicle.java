@@ -9,6 +9,7 @@ public abstract class Vehicle {
     protected String Drive_Wheel_Config;
     protected String Fuel_Type;
     protected String Model_Date;
+    protected String Adding_Date;
     protected String Vehicle_Config;
     protected String vehicle_Engine;
     protected String Wheel_Base_Type;
@@ -35,7 +36,19 @@ public abstract class Vehicle {
     protected double Price;
     protected boolean IsNew;
     protected ArrayList<String> Reviews;
+
+    public Vehicle(String product_ID, String fullName, String adding_Date, String manifacrurer, String vehicle_Image, double price, boolean isNew) {
+        Product_ID = product_ID;
+        FullName = fullName;
+        Adding_Date = adding_Date;
+        Manifacrurer = manifacrurer;
+        Vehicle_Image = vehicle_Image;
+        Price = price;
+        IsNew = isNew;
+    }
+
     protected abstract void Calc_Safeness();
+
 
     public String getProduct_ID() {
         return Product_ID;
@@ -67,6 +80,22 @@ public abstract class Vehicle {
 
     public void setDrive_Wheel_Config(String drive_Wheel_Config) {
         Drive_Wheel_Config = drive_Wheel_Config;
+    }
+
+    public String getAdding_Date() {
+        return Adding_Date;
+    }
+
+    public void setAdding_Date(String adding_Date) {
+        Adding_Date = adding_Date;
+    }
+
+    public void setSafety_Value(float safety_Value) {
+        Safety_Value = safety_Value;
+    }
+
+    public void setReviews(ArrayList<String> reviews) {
+        Reviews = reviews;
     }
 
     public String getFuel_Type() {
@@ -128,7 +157,6 @@ public abstract class Vehicle {
     public String getSecondary_Colour() {
         return Secondary_Colour;
     }
-
     public void setSecondary_Colour(String secondary_Colour) {
         Secondary_Colour = secondary_Colour;
     }

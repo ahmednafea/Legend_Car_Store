@@ -3,42 +3,40 @@ package com.an.thelegendcarsstore.Models;
 import java.util.ArrayList;
 
 public class Administration {
-    private static ArrayList<Car> Cars;
-    private static ArrayList<Truck> Trucks;
-    private static ArrayList<Vehicle_Part> Parts;
-    private static User Client;
-    public static void AddCar(Car car){
-        Cars.add(car);
-    }
-    public static void AddTruck(Truck truck){
-        Trucks.add(truck);
-    }
-    public static void AddPart(Vehicle_Part part){
-        Parts.add(part);
-    }
-    public static void SetUser(User user){
-        Client=user;
-    }
-    public static ArrayList<Car> GetCars(){
-        return Cars;
-    }
-
-    public static ArrayList<Truck> GetTrucks(){
-        return Trucks;
-    }
-
-    public static ArrayList<Vehicle_Part> GetParts(){
-        return Parts;
-    }
-
-    public static User GetClient(){
-        return Client;
-    }
-
-    public static boolean Verify_User(String Email,String Password){
-        if(Email.equals(Client.getEmail())&&Password.equals(Client.getPassword()))
-            return true;
+    public static ArrayList<Car> Cars;
+    public static ArrayList<Truck> Trucks;
+    public static ArrayList<Vehicle_Part> Parts;
+    public static User Client;
+    public static boolean CarIsFound(String ID){
+        for (Car c:Cars) {
+            if (c.getProduct_ID().equals(ID))
+                return true;
+        }
         return false;
+    }
+    public static ArrayList<Vehicle> getPopularVehicles(){
+        ArrayList<Vehicle> popular=new ArrayList<>();
+        for (Car c:Cars) {
+            if (c.Rating>=4)
+                popular.add(c);
+        }
+        for (Truck t:Trucks) {
+            if (t.Rating>=4)
+                popular.add(t);
+        }
+        return popular;
+    }
+    public static ArrayList<Vehicle> getNewestVehicles(){
+        ArrayList<Vehicle> Newest=new ArrayList<>();
+        for (Car c:Cars) {
+            if (c.Rating>=4)
+                Newest.add(c);
+        }
+        for (Truck t:Trucks) {
+            if (t.Rating>=4)
+                Newest.add(t);
+        }
+        return Newest;
     }
 
 }
