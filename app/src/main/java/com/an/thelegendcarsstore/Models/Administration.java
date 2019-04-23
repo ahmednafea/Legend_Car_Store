@@ -1,5 +1,7 @@
 package com.an.thelegendcarsstore.Models;
 
+import com.an.thelegendcarsstore.Algorithems.Quick_Sort;
+
 import java.util.ArrayList;
 
 public class Administration {
@@ -26,16 +28,9 @@ public class Administration {
         }
         return popular;
     }
-    public static ArrayList<Vehicle> getNewestVehicles(){
-        ArrayList<Vehicle> Newest=new ArrayList<>();
-        for (Car c:Cars) {
-            if (c.Rating>=4)
-                Newest.add(c);
-        }
-        for (Truck t:Trucks) {
-            if (t.Rating>=4)
-                Newest.add(t);
-        }
+    public static ArrayList<Car> getNewestCars(){
+        ArrayList<Car> Newest=Cars;
+        Quick_Sort.Cars_Sort(Newest,0 ,Newest.size()-1);
         return Newest;
     }
 
