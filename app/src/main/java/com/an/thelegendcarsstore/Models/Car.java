@@ -8,15 +8,17 @@ package com.an.thelegendcarsstore.Models;
     private StringBuilder More_Features;
     private String SunRoof_Type;
 
-     public Car(float roof_Load, String body_type, double price, boolean renting_availability,
-                float wheel_size, StringBuilder more_features, String sunRoof_type, int Airbags_Count) {
-         Roof_Load = roof_Load;
+     public Car( String fullName, String adding_Date, String manifacrurer, String vehicle_Image, double price, boolean isNew, String body_type, boolean renting_availability,
+                 int Airbags_Count) {
+         super(fullName,adding_Date,manifacrurer,vehicle_Image,price,isNew);
+         String s = String.format("%x",(int)(Math.random()*100));
+         while (Administration.Car_ID_isFound(s)) {
+             s = String.format("%x",(int)(Math.random()*100));
+         }
+         this.setProduct_ID(s);
          Body_Type = body_type;
          Price = price;
          Renting_Availability = renting_availability;
-         Wheel_Size = wheel_size;
-         More_Features = more_features;
-         SunRoof_Type = sunRoof_type;
          this.Airbags_Count = Airbags_Count;
          Calc_Safeness();
      }

@@ -47,4 +47,18 @@ public class Administration {
         Quick_Sort.Trucks_Sort(Newest,0 ,Newest.size()-1);
         return Newest;
     }
+    public static boolean Car_ID_isFound(String Car_Id){
+        for (Car s:Cars) {
+            if(s.getProduct_ID().equals(Car_Id))
+                return true;
+        }
+        return false;
+    }
+    public static boolean Truck_ID_isFound(String Truck_Id){
+        for (Truck s:Trucks) {
+            if(s.getProduct_ID().equals(Truck_Id))
+                return true;
+        }
+        return false;
+    }
 }

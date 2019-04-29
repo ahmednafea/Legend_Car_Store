@@ -8,14 +8,14 @@ package com.an.thelegendcarsstore.Models;
      private float Wheels_Size;
      private StringBuilder More_Features;
 
-     public Truck(String cap_Type, String truck_Type, String sunRoof_Type
-             , float trackingLimit, float wheels_Size, StringBuilder more_Features) {
-         Cap_Type = cap_Type;
+     public Truck(String fullName, String adding_Date, String manufacturer, String vehicle_Image, double price, boolean isNew, String truck_Type) {
+         super(fullName,adding_Date,manufacturer,vehicle_Image,price,isNew);
+         String s = String.format("%x",(int)(Math.random()*100));
+         while (Administration.Truck_ID_isFound(s)) {
+             s = String.format("%x",(int)(Math.random()*100));
+         }
+         this.setProduct_ID(s);
          Truck_Type = truck_Type;
-         SunRoof_Type = sunRoof_Type;
-         TrackingLimit = trackingLimit;
-         Wheels_Size = wheels_Size;
-         More_Features = more_Features;
      }
 
      @Override

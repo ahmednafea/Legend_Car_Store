@@ -37,8 +37,7 @@ public abstract class Vehicle {
     protected boolean IsNew;
     protected ArrayList<String> Reviews;
 
-    public Vehicle(String product_ID, String fullName, String adding_Date, String manifacrurer, String vehicle_Image, double price, boolean isNew) {
-        Product_ID = product_ID;
+    public Vehicle(String fullName, String adding_Date, String manifacrurer, String vehicle_Image, double price, boolean isNew) {
         FullName = fullName;
         Adding_Date = adding_Date;
         Manifacrurer = manifacrurer;

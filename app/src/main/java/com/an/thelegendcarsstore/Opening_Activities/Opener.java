@@ -20,7 +20,7 @@ import android.widget.TextView;
 import com.an.thelegendcarsstore.MainActivity;
 import com.an.thelegendcarsstore.R;
 
-public class Openner extends AppCompatActivity {
+public class Opener extends AppCompatActivity {
     ViewPager viewPager;
     LinearLayout controllayout;
     OpenerAdapter openerAdapter;
@@ -44,15 +44,15 @@ public class Openner extends AppCompatActivity {
         finishbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Openner.this.startActivity(new Intent(Openner.this, MainActivity.class));
-                Openner.this.finish();
+                Opener.this.startActivity(new Intent(Opener.this, MainActivity.class));
+                Opener.this.finish();
             }
         });
         skipbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Openner.this.startActivity(new Intent(Openner.this, MainActivity.class));
-                Openner.this.finish();
+                Opener.this.startActivity(new Intent(Opener.this, MainActivity.class));
+                Opener.this.finish();
             }
         });
         viewPager.setAdapter(openerAdapter);
@@ -61,7 +61,7 @@ public class Openner extends AppCompatActivity {
     }
 
     public void addDots(int position){
-        dots=new TextView [3];
+        dots=new TextView [4];
         controllayout.removeAllViews();
         for (int i=0;i<dots.length;i++){
             dots[i]=new TextView(this);
@@ -116,14 +116,19 @@ public class Openner extends AppCompatActivity {
         ImageView imageView;
         TextView header,description;
         String [] Headers={
-                "Gaming Community","Share Your EXP","Well Designed"
+                "Cars Shopping & Renting",
+                "Trucks Shopping",
+                "Vehicle Parts Shopping",
+                "Mutual Trust"
         };
         String [] Descriptions={
-                "Gamers Hub is a gaming community where gamers share their achievements and experiences to help one another enjoy gaming"
-                ,"Share exp with the geeks community","This Application is developed and designed by powerful developers in OSC Projects Committee"
+                "Through our application, you can purchase and rent a large number of cars only with a touch after knowing all the car data"
+                ,"You can also buy a huge number of trucks with a touch only after knowing all the truck's data and seeing its image",
+                "You can also purchase a huge number of spare parts that are guaranteed only by touch, after knowing all the piece data, and matching it with your vehicle and seeing its image",
+                "Our motto is trust and not cheating, so all that is available in the store of vehicles and parts has been verified and reviewed before being presented to our dear customers."
         };
         int [] Images={
-                R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground
+                R.drawable.opener_car,R.drawable.opener_truck,R.drawable.opener_parts,R.drawable.opener_repair
         };
         public OpenerAdapter(Context context) {
             this.context = context;

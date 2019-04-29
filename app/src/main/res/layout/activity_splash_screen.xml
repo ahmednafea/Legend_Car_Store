@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:background="#ffffff"
     tools:context=".Opening_Activities.SplashScreen">
+    <com.cunoraz.gifview.library.GifView
+        android:id="@+id/splashgif"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:minWidth="400dp"
+        android:minHeight="400dp"
+        custom:gif="@mipmap/store_gif" />
+    <ProgressBar
+        android:id="@+id/splash_progress_bar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/splashgif"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All you need for your vehicle is here"
+        android:textSize="22sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="italic"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="serif-monospace"/>
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

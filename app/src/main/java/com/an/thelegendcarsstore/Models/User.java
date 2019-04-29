@@ -15,8 +15,12 @@ import java.util.ArrayList;
      private ArrayList<String> Rented_Cars;
      private ArrayList<String>Cart;
 
-     public User(String ID, String full_Name, String email, String password, String mobile_Number, String creditCard_Number) {
-         this.ID = ID;
+     public User(String full_Name, String email, String password, String mobile_Number, String creditCard_Number) {
+         String s = String.format("%x",(int)(Math.random()*100));
+       /*  while (Administration.Car_ID_isFound(s)) {
+             s = String.format("%x",(int)(Math.random()*100));
+         }*/
+         ID=s;
          Full_Name = full_Name;
          Email = email;
          Password = password;
