@@ -2,8 +2,7 @@ package com.an.thelegendcarsstore.Models;
 
 import java.util.ArrayList;
 
- class User {
-    private String ID;
+ public class User {
      private String Full_Name;
      private String Email;
      private String Password;
@@ -12,15 +11,11 @@ import java.util.ArrayList;
      private int Points;
      private ArrayList<String>Reviews;
      private ArrayList<String>History;
-     private ArrayList<String> Rented_Cars;
+     private String Rented_Car;
      private ArrayList<String>Cart;
+     private String Testing_Car;
 
      public User(String full_Name, String email, String password, String mobile_Number, String creditCard_Number) {
-         String s = String.format("%x",(int)(Math.random()*100));
-       /*  while (Administration.Car_ID_isFound(s)) {
-             s = String.format("%x",(int)(Math.random()*100));
-         }*/
-         ID=s;
          Full_Name = full_Name;
          Email = email;
          Password = password;
@@ -29,7 +24,6 @@ import java.util.ArrayList;
          Points=0;
          Reviews=new ArrayList<>();
          History=new ArrayList<>();
-         Rented_Cars=new ArrayList<>();
          Cart=new ArrayList<>();
      }
      public String getEmail() {
@@ -50,11 +44,11 @@ import java.util.ArrayList;
     public void AddToHistory(String history) {
         History.add(history);
     }
-    public ArrayList<String> getRented_Cars() {
-        return Rented_Cars;
+    public String getRented_Car() {
+        return Rented_Car;
     }
     public void AddToRented_Cars(String rentedCars) {
-        Rented_Cars.add(rentedCars);
+        Rented_Car=rentedCars;
     }
     public ArrayList<String> getCart() {
         return Cart;
@@ -67,12 +61,6 @@ import java.util.ArrayList;
     }
     public void setFull_Name(String full_Name) {
         this.Full_Name = full_Name;
-    }
-    public String getID() {
-        return ID;
-    }
-    public void setID(String Id) {
-        this.ID = Id;
     }
     public String getPassword() {
         return Password;

@@ -4,26 +4,43 @@ package com.an.thelegendcarsstore.Models;
     private float Roof_Load;
     private String Body_Type;
     private boolean Renting_Availability;
+    private boolean Is_Rented;
+     private boolean Is_For_Test;
     private float Wheel_Size;
     private StringBuilder More_Features;
     private String SunRoof_Type;
 
-     public Car( String fullName, String adding_Date, String manifacrurer, String vehicle_Image, double price, boolean isNew, String body_type, boolean renting_availability,
+     public Car( String id,String fullName, String adding_Date, String manifacrurer, String vehicle_Image, double price, boolean isNew,boolean is_For_Test, String body_type, boolean renting_availability,
                  int Airbags_Count) {
          super(fullName,adding_Date,manifacrurer,vehicle_Image,price,isNew);
-         String s = String.format("%x",(int)(Math.random()*100));
-         while (Administration.Car_ID_isFound(s)) {
-             s = String.format("%x",(int)(Math.random()*100));
-         }
-         this.setProduct_ID(s);
+         this.setProduct_ID(id);
          Body_Type = body_type;
          Price = price;
          Renting_Availability = renting_availability;
+         Is_Rented=false;
+         Is_For_Test=is_For_Test;
          this.Airbags_Count = Airbags_Count;
          Calc_Safeness();
      }
+
+     public boolean isIs_For_Test() {
+         return Is_For_Test;
+     }
+
+     public void setIs_For_Test(boolean is_For_Test) {
+         Is_For_Test = is_For_Test;
+     }
+
      protected void Calc_Safeness(){
      Safety_Value = Airbags_Count /0.8f;
+     }
+
+     public boolean isIs_Rented() {
+         return Is_Rented;
+     }
+
+     public void setIs_Rented(boolean is_Rented) {
+         Is_Rented = is_Rented;
      }
 
      public float getRoof_Load() {
@@ -42,7 +59,7 @@ package com.an.thelegendcarsstore.Models;
          Body_Type = body_Type;
      }
 
-     public boolean isRenting_Availability() {
+     public boolean Renting_Availability() {
          return Renting_Availability;
      }
 

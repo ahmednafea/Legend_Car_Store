@@ -24,29 +24,47 @@ public class Administration {
         }
         return false;
     }
+    private static int MAX(int x,int y){
+        if(x>y){
+            return x;
+        }
+        return y;
+    }
     public static ArrayList<Vehicle> getPopularVehicles(){
         ArrayList<Vehicle> popular=new ArrayList<>();
-        for (int i=0;i<10;i++) {
-            if (Cars.get(i).Rating>=4)
-                popular.add(Cars.get(i));
-            if (Trucks.get(i).Rating>=4)
-                popular.add(Trucks.get(i));
-            if (popular.size()>=10)
-                break;
+        if(!Cars.isEmpty()&&!Trucks.isEmpty()) {
+            Quick_Sort.Cars_Popularity_Sort(Cars, 0, Cars.size() - 1);
+            Quick_Sort.Trucks_Popularity_Sort(Trucks, 0, Trucks.size() - 1);
+            for (int i=0;i<MAX(Cars.size(),Trucks.size());i++){
+                if(i<Cars.size())
+                    popular.add(Cars.get(i));
+                if (i<Trucks.size())
+                    popular.add(Trucks.get(i));
+            }
         }
         return popular;
     }
-    public static ArrayList<Car> getNewestCars(){
-        ArrayList<Car> Newest=Cars;
-        Quick_Sort.Cars_Sort(Newest,0 ,Newest.size()-1);
-        return Newest;
+    public static ArrayList<Car> getRentableVehicles(){
+        ArrayList<Car> popular=new ArrayList<>();
+        if(!Cars.isEmpty()) {
+            for (int i=0;i<Cars.size();i++){
+                if(Cars.get(i).Renting_Availability()&&!Cars.get(i).isIs_Rented())
+                    popular.add(Cars.get(i));
+            }
+        }
+        return popular;
+    }
+    public static ArrayList<Car> getTestableVehicles(){
+        ArrayList<Car> popular=new ArrayList<>();
+        if(!Cars.isEmpty()) {
+            for (int i=0;i<Cars.size();i++){
+                if(Cars.get(i).isIs_For_Test())
+                    popular.add(Cars.get(i));
+            }
+        }
+        return popular;
     }
 
-    public static ArrayList<Truck> getNewestTrucks(){
-        ArrayList<Truck> Newest=Trucks;
-        Quick_Sort.Trucks_Sort(Newest,0 ,Newest.size()-1);
-        return Newest;
-    }
     public static boolean Car_ID_isFound(String Car_Id){
         for (Car s:Cars) {
             if(s.getProduct_ID().equals(Car_Id))
@@ -60,5 +78,16 @@ public class Administration {
                 return true;
         }
         return false;
+    }
+    public static Vehicle GetVehicle(String id){
+        for (Car s:Cars) {
+            if(s.getProduct_ID().equals(id))
+                return s;
+        }
+        for (Truck s:Trucks) {
+            if(s.getProduct_ID().equals(id))
+                return s;
+        }
+        return null;
     }
 }

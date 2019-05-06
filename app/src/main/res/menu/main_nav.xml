@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_icn"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_categories"
+        android:icon="@drawable/categories_icn"
+        android:title="Categories" />
+
+    <item
+        android:id="@+id/nav_cart"
+        android:icon="@drawable/cart_icn"
+        android:title="Cart" />
+
+    <item
+        android:id="@+id/nav_rent"
+        android:icon="@drawable/rent_icn"
+        android:title="Rent" />
+
+    <item
+        android:id="@+id/nav_drive"
+        android:icon="@drawable/drive_icn"
+        android:title="Test Drive" />
+
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/setting_icn"
+        android:title="Setting" />
+</menu>

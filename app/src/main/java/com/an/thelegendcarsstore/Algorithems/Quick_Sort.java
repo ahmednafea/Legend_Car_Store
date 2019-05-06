@@ -9,11 +9,11 @@ public class Quick_Sort {
 
     private static int Cars_Partition(ArrayList<Car> vehicles, int low, int high)
         {
-            int pivot =Integer.getInteger(vehicles.get(high).getAdding_Date().substring(0,1));
+            float pivot = vehicles.get(high).getRating();
             int i = (low-1);
             for (int j=low; j<high; j++)
             {
-                if (Integer.getInteger(vehicles.get(j).getAdding_Date().substring(0,1)) <= pivot)
+                if (vehicles.get(j).getRating() <= pivot)
                 {
                     i++;
                     Car temp = vehicles.get(i);
@@ -26,24 +26,24 @@ public class Quick_Sort {
             vehicles.set(high,temp);
             return i+1;
         }
-       public static void Cars_Sort(ArrayList<Car> vehicles, int low, int high)
+       public static void Cars_Popularity_Sort(ArrayList<Car> vehicles, int low, int high)
         {
             if (low < high)
             {
                 int pi = Cars_Partition(vehicles, low, high);
-                Cars_Sort(vehicles, low, pi-1);
-                Cars_Sort(vehicles, pi+1, high);
+                Cars_Popularity_Sort(vehicles, low, pi-1);
+                Cars_Popularity_Sort(vehicles, pi+1, high);
             }
 
         }
 
     private static int Trucks_Partition(ArrayList<Truck> vehicles, int low, int high)
     {
-        int pivot =Integer.getInteger(vehicles.get(high).getAdding_Date().substring(0,1));
+        float pivot =vehicles.get(high).getRating();
         int i = (low-1);
         for (int j=low; j<high; j++)
         {
-            if (Integer.getInteger(vehicles.get(j).getAdding_Date().substring(0,1)) <= pivot)
+            if (vehicles.get(j).getRating() <= pivot)
             {
                 i++;
                 Truck temp = vehicles.get(i);
@@ -56,13 +56,13 @@ public class Quick_Sort {
         vehicles.set(high,temp);
         return i+1;
     }
-    public static void Trucks_Sort(ArrayList<Truck> vehicles, int low, int high)
+    public static void Trucks_Popularity_Sort(ArrayList<Truck> vehicles, int low, int high)
     {
         if (low < high)
         {
             int pi = Trucks_Partition(vehicles, low, high);
-            Trucks_Sort(vehicles, low, pi-1);
-            Trucks_Sort(vehicles, pi+1, high);
+            Trucks_Popularity_Sort(vehicles, low, pi-1);
+            Trucks_Popularity_Sort(vehicles, pi+1, high);
         }
 
     }

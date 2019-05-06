@@ -1,4 +1,4 @@
-package com.an.thelegendcarsstore.Behavior;
+package com.an.thelegendcarsstore.Adapters;
 
 import android.content.Context;
 import android.support.design.widget.AppBarLayout;
