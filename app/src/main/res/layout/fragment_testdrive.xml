@@ -1,16 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="20dp"
     android:background="#ffffee"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main_Fragments.Home_Fragment">
-           <android.support.v7.widget.RecyclerView
-               android:id="@+id/Home_recycle"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:clipToPadding="false"
-               />
+    android:orientation="vertical">
 
-</RelativeLayout>
+    <DatePicker
+        android:id="@+id/Course_Date_Picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/notactivebtn"
+        android:layout_gravity="center_horizontal"
+        />
+    <Button
+        android:id="@+id/StartDate_btn"
+        android:padding="20dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="Take Start Date"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:textColor="@color/Gold"
+        android:background="@drawable/activebtn"/>
+    <Button
+        android:id="@+id/EndDate_btn"
+        android:layout_width="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:padding="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="Take End Date"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:textColor="@color/Gold"
+        android:background="@drawable/activebtn"/>
+    <Button
+        android:id="@+id/Course_Register_btn"
+        android:layout_width="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:padding="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="register"
+        android:visibility="invisible"
+        android:enabled="false"
+        android:drawableStart="@drawable/star_icn"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/Gold"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:textColor="@color/Gold"
+        android:background="@drawable/activebtn"/>
+
+</LinearLayout>
+
+</ScrollView>

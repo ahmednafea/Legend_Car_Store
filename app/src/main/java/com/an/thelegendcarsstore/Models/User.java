@@ -91,7 +91,7 @@ import java.util.ArrayList;
          return Driving_course;
      }
 
-     public void setDriving_course(Course driving_course) {
-         Driving_course = driving_course;
+     public void setDriving_course(String start,String end) {
+         Driving_course = new Course(start, end);
      }
  }

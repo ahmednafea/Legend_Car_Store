@@ -55,23 +55,6 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableStart="@drawable/cart_icn"
-        android:background="@drawable/activebtn"
-        android:scaleType="centerCrop"
-        android:padding="20dp"
-        android:textColor="@color/Gold"
-        android:text="Cart"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:drawablePadding="20dp"
-        android:id="@+id/Cart_Btn"
-        android:drawableTint="@color/Gold"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:drawableStart="@drawable/face_icn"
         android:background="@drawable/activebtn"
         android:scaleType="centerCrop"
@@ -86,7 +69,6 @@
         android:id="@+id/Profile_Btn"
         android:drawableTint="@color/Gold"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/Cart_Btn"
         android:layout_marginTop="20dp"/>
 
 </RelativeLayout>
@@ -100,26 +82,7 @@
             android:textColor="@color/colorPrimaryDark"
             android:text="Welcome to our Store
 Some Features are not yet complete :)"/>
-        <ImageButton
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:scaleType="centerCrop"
-            android:padding="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:src="@drawable/sys_logo"
-            android:background="@drawable/notactivebtn"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Legend Store"
-            android:textAllCaps="true"
-            android:textAlignment="center"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorAccent"
-            android:layout_marginTop="5dp"/>
+
     </LinearLayout>
 
 </ScrollView>

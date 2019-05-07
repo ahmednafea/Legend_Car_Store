@@ -39,7 +39,7 @@ public class Rent_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_rent, container, false);
-        recyclerView = view.findViewById(R.id.Home_recycle);
+        recyclerView = view.findViewById(R.id.Rent_recycle);
         mAdapter = new StoreAdapter(getActivity(), Rentable_Vehicle);
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(), 3);
         recyclerView.setLayoutManager(mLayoutManager);

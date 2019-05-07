@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.an.thelegendcarsstore.Models.Administration;
 import com.an.thelegendcarsstore.Models.Vehicle;
@@ -53,7 +54,7 @@ public class Cart_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_cart, container, false);
         recyclerView = view.findViewById(R.id.Home_recycle);
         purchase_btn=view.findViewById(R.id.Purchase_Btn);
-        fillRecycler();
+        if(Administration.Signed){fillRecycler();
         if(!UserVehicle.isEmpty()){
             purchase_btn.setEnabled(true);
             purchase_btn.setBackgroundResource(R.drawable.activebtn);
@@ -67,6 +68,12 @@ public class Cart_Fragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
         recyclerView.setNestedScrollingEnabled(false);
+        }
+        else{
+            purchase_btn.setVisibility(View.INVISIBLE);
+            purchase_btn.setEnabled(false);
+            Toast.makeText(this.getContext(), "Please Sign In First", Toast.LENGTH_LONG).show();
+        }
         return view;
     }
 

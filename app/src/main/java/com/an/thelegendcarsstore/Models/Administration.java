@@ -9,6 +9,7 @@ public class Administration {
     public static ArrayList<Truck> Trucks=new ArrayList<>();
     public static ArrayList<Vehicle_Part> Parts=new ArrayList<>();
     public static User Client;
+    public static boolean Signed=false;
     public static ArrayList<Review>Reviews=new ArrayList<>();
     public static boolean CarIsFound(String ID){
         for (Car c:Cars) {
@@ -89,5 +90,9 @@ public class Administration {
                 return s;
         }
         return null;
+    }
+    public static void Login(User user){
+        Client=user;
+        Signed=true;
     }
 }
