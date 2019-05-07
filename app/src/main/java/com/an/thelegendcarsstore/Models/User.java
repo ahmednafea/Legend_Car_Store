@@ -13,7 +13,7 @@ import java.util.ArrayList;
      private ArrayList<String>History;
      private String Rented_Car;
      private ArrayList<String>Cart;
-     private String Testing_Car;
+     private Course Driving_course;
 
      public User(String full_Name, String email, String password, String mobile_Number, String creditCard_Number) {
          Full_Name = full_Name;
@@ -47,7 +47,7 @@ import java.util.ArrayList;
     public String getRented_Car() {
         return Rented_Car;
     }
-    public void AddToRented_Cars(String rentedCars) {
+    public void SetRented_Car(String rentedCars) {
         Rented_Car=rentedCars;
     }
     public ArrayList<String> getCart() {
@@ -86,4 +86,12 @@ import java.util.ArrayList;
     public void setPoints(int points) {
         this.Points = points;
     }
-}
+
+     public Course getDriving_course() {
+         return Driving_course;
+     }
+
+     public void setDriving_course(Course driving_course) {
+         Driving_course = driving_course;
+     }
+ }
