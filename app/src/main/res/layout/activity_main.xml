@@ -27,7 +27,8 @@
             android:id="@+id/search_field"
             android:textColor="@color/colorPrimary"
             android:textColorHint="#cccccc" />
-        </LinearLayout>
+    </LinearLayout>
+
     <FrameLayout
         android:id="@+id/main_frame_container"
         android:layout_width="match_parent"
@@ -35,15 +36,20 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottom_nav_bar"
+    <io.github.yavski.fabspeeddial.FabSpeedDial
+        android:id="@+id/bottom_nav_Circ"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
-        app:itemBackground="@color/colorAccent"
-        android:foreground="?attr/selectableItemBackground"
-        app:itemIconTint="@color/Gold"
-        app:itemTextColor="@android:color/white"
-        app:menu="@menu/main_nav" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:fabGravity="bottom_end"
+        app:fabMenu="@menu/main_nav"
+        app:fabDrawable="@drawable/sys_logo"
+        app:fabBackgroundTint="@color/colorAccent"
+        app:miniFabBackgroundTint="@color/colorAccent"
+        app:fabDrawableTint="@color/Gold"
+        app:miniFabDrawableTint="@color/Gold"
+        app:miniFabTitleTextColor="@color/colorAccent"/>
+
+
 </RelativeLayout>
