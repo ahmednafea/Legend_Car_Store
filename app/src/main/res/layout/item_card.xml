@@ -25,9 +25,10 @@
             >
             <ImageView
                 android:id="@+id/item_card_img"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="96dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="96dp"
+                android:background="@drawable/notactivebtn"
                 android:clickable="true"
                 android:scaleType="fitXY"
                 android:focusable="true" />
@@ -38,13 +39,15 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/item_card_img"
                 android:lines="2"
+                android:hint="Name"
+                android:textColorHint="@color/colorPrimary"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingTop="5dp"
                 android:textStyle="bold"
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/item_card_detail"
@@ -52,11 +55,22 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/item_card_name"
                 android:layout_marginEnd="5dp"
-                android:gravity="left"
-                android:textAlignment="gravity"
+                android:gravity="start"
+                android:hint="Price"
+                android:textColorHint="@color/colorPrimary"
+                android:textAlignment="center"
                 android:paddingBottom="5dp"
                 android:textColor="@color/colorAccent"
-                android:textSize="12sp" />
+                android:textSize="14sp" />
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:id="@+id/item_card_rate"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/item_card_detail"
+                android:rating="0"
+                android:progressTint="@color/Gold"
+                android:progressBackgroundTint="#af66ff"/>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

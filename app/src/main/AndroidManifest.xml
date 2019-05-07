@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/sys_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Product_Profile"></activity>
+        <activity android:name=".Category_Viewer"></activity>
+        <activity android:name=".Product_Profile" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
