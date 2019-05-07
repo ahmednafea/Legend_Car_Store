@@ -7,6 +7,64 @@
     android:paddingTop="20dp"
     android:background="@android:color/white"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:background="@drawable/notactivebtn"
+        android:layout_marginEnd="5dp"
+        android:orientation="horizontal">
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy"
+            android:drawableStart="@drawable/cart_icn"
+            android:drawableTint="@color/Gold"
+            android:padding="10dp"
+            android:drawablePadding="10dp"
+
+        android:textColor="@color/Gold"
+        android:background="@drawable/activebtn"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textAllCaps="true"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rent"
+            android:drawableStart="@drawable/rent_icn"
+            android:drawableTint="@color/Gold"
+            android:padding="10dp"
+            android:drawablePadding="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/Gold"
+            android:background="@drawable/activebtn"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:drawableStart="@drawable/drive_icn"
+            android:drawableTint="@color/Gold"
+            android:padding="10dp"
+            android:drawablePadding="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/Gold"
+            android:background="@drawable/activebtn"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textAllCaps="true"/>
+
+    </LinearLayout>
+
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="162dp"
@@ -23,7 +81,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
