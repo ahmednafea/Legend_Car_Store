@@ -1,6 +1,7 @@
 package com.an.thelegendcarsstore.Main_Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import android.widget.TextView;
 
 import com.an.thelegendcarsstore.Models.Administration;
 import com.an.thelegendcarsstore.Models.Vehicle;
+import com.an.thelegendcarsstore.Product_Profile;
 import com.an.thelegendcarsstore.R;
 import com.bumptech.glide.Glide;
 
@@ -133,6 +135,17 @@ public class Home_Fragment extends Fragment {
         public StoreAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View itemView = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.item_card, parent, false);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Home_Fragment.this.getContext(), Product_Profile.class);
+                    Bundle bundle=new Bundle();
+                    bundle.putString("Product_Code","123");
+                    intent.putExtras(bundle);
+                    Home_Fragment.this.startActivity(intent);
+                    Home_Fragment.this.getActivity().finish();
+                }
+            });
             return new StoreAdapter.MyViewHolder(itemView);
         }
         @Override
@@ -143,6 +156,7 @@ public class Home_Fragment extends Fragment {
             Glide.with(context)
                     .load(vehicle.getVehicle_Image())
                     .into(holder.image);
+
         }
 
         @Override
