@@ -46,6 +46,9 @@ public abstract class Vehicle {
         IsNew = isNew;
     }
 
+    protected Vehicle() {
+    }
+
     protected abstract void Calc_Safeness();
 
 

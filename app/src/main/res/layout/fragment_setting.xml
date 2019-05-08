@@ -46,32 +46,27 @@
                 android:textStyle="bold"
                 android:textColor="@color/Gold"
                 android:minWidth="200dp"/>
-        </RelativeLayout>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:id="@+id/setting_Client">
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableStart="@drawable/face_icn"
-        android:background="@drawable/activebtn"
-        android:scaleType="centerCrop"
-        android:padding="20dp"
-        android:drawablePadding="20dp"
-        android:textAllCaps="true"
-        android:text="Profile"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textColor="@color/Gold"
-        android:id="@+id/Profile_Btn"
-        android:drawableTint="@color/Gold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/face_icn"
+                android:background="@drawable/activebtn"
+                android:layout_below="@id/Signing_Btn"
+                android:scaleType="centerCrop"
+                android:padding="10dp"
+                android:drawablePadding="20dp"
+                android:textAllCaps="true"
+                android:text="Profile"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/Gold"
+                android:id="@+id/Profile_Btn"
+                android:drawableTint="@color/Gold"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"/>
 
-</RelativeLayout>
+        </RelativeLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

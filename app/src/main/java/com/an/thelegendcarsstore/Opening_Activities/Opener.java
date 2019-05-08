@@ -2,11 +2,12 @@ package com.an.thelegendcarsstore.Opening_Activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,12 +26,21 @@ public class Opener extends AppCompatActivity {
     LinearLayout controllayout;
     OpenerAdapter openerAdapter;
     TextView dots[];
+    public static final String OpenerPreferences = "opener" ;
+    public static final String prefName = "fristtime";
     Button finishbtn, skipbtn;
     int current_page;
+    SharedPreferences sharedpreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_openner);
+        sharedpreferences = getSharedPreferences(OpenerPreferences, Context.MODE_PRIVATE);
+        boolean isfirst=sharedpreferences.getBoolean(prefName, true);
+        if(!isfirst){
+            Opener.this.startActivity(new Intent(Opener.this, MainActivity.class));
+            Opener.this.finish();
+        }
         viewPager=findViewById(R.id.opener_view_pager);
         controllayout=findViewById(R.id.control_layout);
         openerAdapter=new OpenerAdapter(this);
@@ -41,6 +51,9 @@ public class Opener extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putBoolean(prefName, false);
+        editor.commit();
         finishbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

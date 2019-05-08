@@ -2,14 +2,48 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="20dp"
     android:background="#ffffee"
     android:layout_height="match_parent"
     tools:context=".Main_Fragments.Home_Fragment">
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/search_icn"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:minWidth="320dp"
+            android:background="@drawable/notactivebtn"
+            android:hint="Search Products"
+            android:drawableTint="@color/colorPrimary"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:id="@+id/search_field"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="#cccccc" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/notactivebtn"
+            android:src="@drawable/search_icn"
+            android:padding="10dp"
+            android:id="@+id/search_btn"
+            android:layout_gravity="end"/>
+    </LinearLayout>
            <android.support.v7.widget.RecyclerView
                android:id="@+id/Home_recycle"
                android:layout_width="match_parent"
                android:layout_height="match_parent"
+               android:layout_below="@id/search_layout"
+               android:layout_marginTop="10dp"
                android:clipToPadding="false"
                />
 

@@ -18,6 +18,10 @@ package com.an.thelegendcarsstore.Models;
          Truck_Type = truck_Type;
      }
 
+     public Truck() {
+
+     }
+
      @Override
      public void Calc_Safeness() {
         this.Safety_Value=this.Airbags_Count /1.2f;

@@ -60,7 +60,7 @@ public class Cart_Fragment extends Fragment {
             purchase_btn.setBackgroundResource(R.drawable.activebtn);
             purchase_btn.setTextColor(getResources().getColor(R.color.Gold));
             purchase_btn.setFocusable(true);
-        }
+
         mAdapter = new StoreAdapter(getActivity(),UserVehicle);
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(), 3);
         recyclerView.setLayoutManager(mLayoutManager);
@@ -68,6 +68,7 @@ public class Cart_Fragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
         recyclerView.setNestedScrollingEnabled(false);
+            }
         }
         else{
             purchase_btn.setVisibility(View.INVISIBLE);

@@ -10,9 +10,9 @@ package com.an.thelegendcarsstore.Models;
     private StringBuilder More_Features;
     private String SunRoof_Type;
 
-     public Car( String id,String fullName, String adding_Date, String manifacrurer, String vehicle_Image, double price, boolean isNew,boolean is_For_Test, String body_type, boolean renting_availability,
+     public Car( String id,String fullName, String adding_Date, String manufacturer, String vehicle_Image, double price, boolean isNew,boolean is_For_Test, String body_type, boolean renting_availability,
                  int Airbags_Count) {
-         super(fullName,adding_Date,manifacrurer,vehicle_Image,price,isNew);
+         super(fullName,adding_Date,manufacturer,vehicle_Image,price,isNew);
          this.setProduct_ID(id);
          Body_Type = body_type;
          Price = price;
@@ -22,6 +22,8 @@ package com.an.thelegendcarsstore.Models;
          this.Airbags_Count = Airbags_Count;
          Calc_Safeness();
      }
+
+     public Car() {}
 
      public boolean isIs_For_Test() {
          return Is_For_Test;

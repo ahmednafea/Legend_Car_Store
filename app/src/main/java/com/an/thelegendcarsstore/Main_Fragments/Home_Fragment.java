@@ -13,6 +13,8 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,6 +28,8 @@ import java.util.ArrayList;
 public class Home_Fragment extends Fragment {
     private RecyclerView recyclerView;
     private StoreAdapter mAdapter;
+    private EditText search;
+    private ImageButton searchbtn;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,12 +41,26 @@ public class Home_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         recyclerView = view.findViewById(R.id.Home_recycle);
+        search=view.findViewById(R.id.search_field);
+        searchbtn=view.findViewById(R.id.search_btn);
         mAdapter = new StoreAdapter(getActivity(), Administration.getPopularVehicles());
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(), 3);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(8), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
+        searchbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList<Vehicle> vehicles=new ArrayList<>();
+                for (Vehicle C:Administration.getPopularVehicles()){
+                    if(C.getFullName().contains(search.getText().toString()))
+                        vehicles.add(C);
+                }
+                mAdapter = new StoreAdapter(getActivity(), vehicles);
+                recyclerView.setAdapter(mAdapter);
+            }
+        });
         recyclerView.setNestedScrollingEnabled(false);
         return view;
     }
@@ -126,6 +144,7 @@ public class Home_Fragment extends Fragment {
                     .load(vehicle.getVehicle_Image())
                     .into(holder.image);
         }
+
         @Override
         public int getItemCount() {
             return vehicles.size();

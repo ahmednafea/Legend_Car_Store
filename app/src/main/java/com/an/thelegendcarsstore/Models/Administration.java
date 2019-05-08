@@ -10,6 +10,7 @@ public class Administration {
     public static ArrayList<Vehicle_Part> Parts=new ArrayList<>();
     public static User Client;
     public static boolean Signed=false;
+    public static boolean is_Admin=false;
     public static ArrayList<Review>Reviews=new ArrayList<>();
     public static boolean CarIsFound(String ID){
         for (Car c:Cars) {
@@ -55,16 +56,6 @@ public class Administration {
         }
         return popular;
     }
-    public static ArrayList<Car> getTestableVehicles(){
-        ArrayList<Car> popular=new ArrayList<>();
-        if(!Cars.isEmpty()) {
-            for (int i=0;i<Cars.size();i++){
-                if(Cars.get(i).isIs_For_Test())
-                    popular.add(Cars.get(i));
-            }
-        }
-        return popular;
-    }
 
     public static boolean Car_ID_isFound(String Car_Id){
         for (Car s:Cars) {
@@ -94,5 +85,7 @@ public class Administration {
     public static void Login(User user){
         Client=user;
         Signed=true;
+        if(Client.getMobile_Number().equals("01128518060"))
+            is_Admin=true;
     }
 }

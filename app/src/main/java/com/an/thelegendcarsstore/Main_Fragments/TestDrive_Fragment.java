@@ -10,6 +10,7 @@ import android.widget.DatePicker;
 import android.widget.Toast;
 
 import com.an.thelegendcarsstore.Models.Administration;
+import com.an.thelegendcarsstore.Models.Firebase_Admin;
 import com.an.thelegendcarsstore.R;
 
 public class TestDrive_Fragment extends Fragment {
@@ -50,6 +51,7 @@ public class TestDrive_Fragment extends Fragment {
                @Override
                public void onClick(View v) {
                    Administration.Client.setDriving_course(date[0], date[1]);
+                   Firebase_Admin.AddUser(Administration.Client);
                }
            });
        }

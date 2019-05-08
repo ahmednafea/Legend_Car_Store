@@ -11,6 +11,7 @@
         android:roundIcon="@drawable/sys_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".Signing"></activity>
         <activity android:name=".Category_Viewer" />
         <activity
             android:name=".MainActivity"
