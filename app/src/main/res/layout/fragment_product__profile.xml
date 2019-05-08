@@ -22,7 +22,7 @@
             android:id="@+id/product_profile_Buybtn"
             android:drawableStart="@drawable/cart_icn"
             android:drawableTint="@color/Gold"
-            android:padding="10dp"
+            android:padding="15dp"
             android:drawablePadding="10dp"
             android:textColor="@color/Gold"
             android:background="@drawable/activebtn"
@@ -37,23 +37,7 @@
             android:id="@+id/product_profile_Rentbtn"
             android:drawableStart="@drawable/rent_icn"
             android:drawableTint="@color/Gold"
-            android:padding="10dp"
-            android:drawablePadding="10dp"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/Gold"
-            android:background="@drawable/activebtn"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:textAlignment="center"
-            android:textAllCaps="true"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Test"
-            android:id="@+id/product_profile_Drivebtn"
-            android:drawableStart="@drawable/drive_icn"
-            android:drawableTint="@color/Gold"
-            android:padding="10dp"
+            android:padding="15dp"
             android:drawablePadding="10dp"
             android:layout_marginStart="10dp"
             android:textColor="@color/Gold"
@@ -115,7 +99,7 @@
                 android:layout_gravity="center_horizontal"
                 android:progressTint="@color/Gold"
                 android:id="@+id/product_profile_Rate"
-                android:rating="5"/>
+                android:progressBackgroundTint="@color/colorAccent"/>
             <MultiAutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
